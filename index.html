@@ -8,6 +8,9 @@
     content="LeCount Media & Marketing helps businesses uncover their essence and turn it into a strategic, marketable brand."
   />
   <title>LeCount Media & Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -84,6 +87,23 @@
       letter-spacing: -2.2px;
     }
 
+
+    /* FRIENDLY, ELEGANT SECTION HEADINGS */
+    .section-title,
+    .philosophy h2,
+    .contact-info h2,
+    .footer-brand h2 {
+      font-family: "Lora", Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+    }
+
+    .nav-links {
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+
     .section-sub {
       max-width: 760px;
       margin-top: 18px;
@@ -133,7 +153,7 @@
     .nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 20px;
       width: min(1150px, 100%);
       margin: 0 auto;
@@ -913,6 +933,10 @@
     }
 
     @media (max-width: 820px) {
+      .nav {
+        justify-content: flex-end;
+      }
+
       .menu-toggle {
         display: grid;
         place-items: center;
@@ -948,10 +972,6 @@
     }
 
     @media (max-width: 650px) {
-      .brand-copy span {
-        display: none;
-      }
-
       .hero-copy h1 {
         font-size: clamp(50px, 16vw, 72px);
         letter-spacing: -3px;
@@ -1123,17 +1143,15 @@
 
     /* REAL WOOD CHESSBOARD IMAGE FRAME + SECTION DIVIDERS */
     :root {
-      --wood-edge: #3a2114;
+      --wood-edge: #d4a62a;
       --board-image: url("asset/chess-board.jpg");
     }
 
     body {
-      background-color: #6a3f24;
-      background-image:
-        linear-gradient(rgba(48, 26, 14, 0.14), rgba(48, 26, 14, 0.14)),
-        var(--board-image);
-      background-size: auto, 1080px auto;
-      background-repeat: repeat, repeat;
+      background-color: #ead39b;
+      background-image: var(--board-image);
+      background-size: 1080px auto;
+      background-repeat: repeat;
       background-position: center top;
       background-attachment: fixed;
     }
@@ -1146,10 +1164,10 @@
       border-left: 14px solid var(--wood-edge);
       border-right: 14px solid var(--wood-edge);
       box-shadow:
-        -20px 0 34px rgba(0,0,0,.32),
-        20px 0 34px rgba(0,0,0,.32),
-        inset 1px 0 rgba(255,255,255,.12),
-        inset -1px 0 rgba(255,255,255,.12);
+        -20px 0 34px rgba(0,0,0,.30),
+        20px 0 34px rgba(0,0,0,.30),
+        inset 3px 0 rgba(255,241,171,.65),
+        inset -3px 0 rgba(126,82,5,.28);
     }
 
     main {
@@ -1176,6 +1194,7 @@
     }
 
     .site-header {
+      border-top: 0 !important;
       background: rgba(251, 247, 238, 0.76) !important;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -1378,23 +1397,14 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#home" class="brand">
-        <div class="brand-badge">L</div>
-        <div class="brand-copy">
-          <strong>LeCount Media</strong>
-          <span>Strategy Made Visible</span>
-        </div>
-      </a>
-
       <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
 
       <ul class="nav-links">
         <li><a href="#philosophy">Our Philosophy</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Our Work</a></li>
-        <li><a href="#about">About Chelsea</a></li>
-        <li><a href="#tax">LeCount Tax Prep</a></li>
-        <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+        <li><a href="#about">The Strategist</a></li>
+        <li><a href="#tax">Affiliates</a></li>
       </ul>
     </nav>
   </header>
@@ -1659,7 +1669,7 @@
           </div>
 
           <div class="about-copy">
-            <span class="eyebrow">About Chelsea</span>
+            <span class="eyebrow">The Strategist</span>
             <h2 class="section-title">The strategist behind the ideas.</h2>
 
             <p>
@@ -1704,7 +1714,7 @@
 
           <p>
             LeCount Media &amp; Marketing is the sister company of
-            <strong>LeCount Tax Prep</strong>, an established tax and
+            <strong>Affiliates</strong>, an established tax and
             accounting business serving individuals and small businesses.
           </p>
 
@@ -1715,7 +1725,7 @@
             scenes to build something sustainable.
           </p>
 
-          <a class="button secondary" href="#">Visit LeCount Tax Prep →</a>
+          <a class="button secondary" href="#">Visit Affiliates →</a>
         </div>
       </div>
     </section>
@@ -1842,8 +1852,8 @@
           <a href="#philosophy">Our Philosophy</a>
           <a href="#services">Services</a>
           <a href="#work">Our Work</a>
-          <a href="#about">About Chelsea</a>
-          <a href="#tax">LeCount Tax Prep</a>
+          <a href="#about">The Strategist</a>
+          <a href="#tax">Affiliates</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
