@@ -18,7 +18,8 @@
       --green-dark: #093f35;
       --navy: #172a3a;
       --navy-soft: #41586a;
-      --gold: #f4c64e;
+      --gold: #f6f3ec;
+      --gold-soft: #ddd6ca;
       --cream: #fbf7ee;
       --white: #ffffff;
       --soft: #eef3ef;
@@ -71,7 +72,7 @@
       padding: 8px 16px;
       border: 2px solid var(--navy);
       border-radius: 999px;
-      background: var(--gold);
+      background: rgba(255,255,255,0.84);
       box-shadow: 4px 4px 0 var(--navy);
       font-size: 12px;
       font-weight: 900;
@@ -138,7 +139,7 @@
     .button.secondary {
       color: var(--navy);
       background: var(--white);
-      box-shadow: 6px 6px 0 var(--gold);
+      box-shadow: 6px 6px 0 var(--gold-soft);
     }
 
     .site-header {
@@ -175,7 +176,7 @@
       border-radius: 16px;
       color: var(--white);
       background: var(--green);
-      box-shadow: 4px 4px 0 var(--gold);
+      box-shadow: 4px 4px 0 var(--gold-soft);
       font-size: 22px;
       font-weight: 900;
     }
@@ -254,7 +255,7 @@
     .hero-copy .accent {
       display: inline-block;
       color: var(--navy);
-      text-shadow: 3px 3px 0 var(--gold);
+      text-shadow: 3px 3px 0 rgba(255,255,255,0.9);
     }
 
     .hero-copy p {
@@ -268,7 +269,7 @@
       max-width: 650px;
       margin-top: 24px;
       padding: 18px 20px;
-      border-left: 6px solid var(--gold);
+      border-left: 6px solid var(--green);
       border-radius: 0 18px 18px 0;
       background: var(--white);
       box-shadow: 6px 6px 0 var(--soft);
@@ -290,7 +291,7 @@
 
     .hero-note span {
       margin-right: 8px;
-      color: var(--gold);
+      color: var(--green-dark);
     }
 
     .chess-panel {
@@ -300,7 +301,7 @@
       border: 4px solid var(--navy);
       border-radius: 34px;
       background: var(--white);
-      box-shadow: 16px 16px 0 var(--gold);
+      box-shadow: 16px 16px 0 var(--gold-soft);
     }
 
     .chess-grid {
@@ -332,7 +333,7 @@
       border-radius: 50%;
       color: var(--white);
       background: var(--green);
-      box-shadow: 10px 10px 0 var(--gold);
+      box-shadow: 10px 10px 0 var(--gold-soft);
       text-align: center;
       transform: translate(-50%, -50%);
     }
@@ -513,7 +514,7 @@
     .work-card {
       padding: 32px;
       background: var(--white);
-      box-shadow: 10px 10px 0 var(--gold);
+      box-shadow: 10px 10px 0 var(--gold-soft);
     }
 
     .label {
@@ -521,7 +522,7 @@
       padding: 7px 12px;
       border: 2px solid var(--navy);
       border-radius: 999px;
-      background: var(--gold);
+      background: rgba(255,255,255,0.88);
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 1px;
@@ -612,7 +613,7 @@
       border-radius: 50%;
       color: var(--white);
       background: var(--green);
-      box-shadow: 10px 10px 0 var(--gold);
+      box-shadow: 10px 10px 0 var(--gold-soft);
       font-size: 72px;
       font-weight: 900;
       letter-spacing: -4px;
@@ -628,7 +629,7 @@
       border: 3px solid var(--navy);
       border-radius: 20px;
       background: var(--white);
-      box-shadow: 6px 6px 0 var(--gold);
+      box-shadow: 6px 6px 0 var(--gold-soft);
       text-align: center;
     }
 
@@ -656,7 +657,7 @@
       border: 3px solid var(--navy);
       border-radius: 18px;
       background: var(--cream);
-      box-shadow: 6px 6px 0 var(--gold);
+      box-shadow: 6px 6px 0 var(--gold-soft);
       text-align: center;
       font-weight: 900;
     }
@@ -687,7 +688,7 @@
       border: 4px solid var(--navy);
       border-radius: 34px;
       background: #f4f4f4;
-      box-shadow: 16px 16px 0 var(--gold);
+      box-shadow: 16px 16px 0 var(--gold-soft);
     }
 
     .sister-card .section-title {
@@ -716,7 +717,7 @@
       border: 4px solid var(--navy);
       border-radius: 34px;
       background: var(--cream);
-      box-shadow: 16px 16px 0 var(--gold);
+      box-shadow: 16px 16px 0 var(--gold-soft);
       text-align: center;
     }
 
@@ -791,7 +792,7 @@
       border: 2px solid var(--navy);
       border-radius: 12px;
       color: var(--navy);
-      background: var(--gold);
+      background: rgba(255,255,255,0.88);
       font-weight: 900;
     }
 
@@ -877,7 +878,7 @@
     }
 
     .footer-brand h2 {
-      color: var(--gold);
+      color: rgba(255,255,255,0.92);
       font-size: 32px;
       line-height: 1;
     }
@@ -1106,7 +1107,7 @@
         position: fixed;
         top: 50%;
         z-index: -1;
-        color: rgba(244, 198, 78, 0.22);
+        color: rgba(255, 255, 255, 0.12);
         font-size: clamp(88px, 7vw, 132px);
         line-height: 1;
         transform: translateY(-50%);
@@ -1144,7 +1145,7 @@
     /* REAL WOOD CHESSBOARD IMAGE FRAME + SECTION DIVIDERS */
     :root {
       --wood-edge: #d4a62a;
-      --board-image: url("asset/chess-board.jpg");
+      --board-image: url("assets/chess-board.jpg");
     }
 
     body {
@@ -1156,18 +1157,42 @@
       background-attachment: fixed;
     }
 
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 18px;
+      background-image: url("assets/gold-foil-repeat-seamless.png");
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+      z-index: 1;
+      pointer-events: none;
+      box-shadow:
+        inset 1px 0 rgba(255, 248, 212, 0.55),
+        inset -1px 0 rgba(109, 72, 8, 0.22);
+    }
+
+    body::before {
+      left: 0;
+    }
+
+    body::after {
+      right: 0;
+      transform: scaleX(-1);
+    }
+
     .site-header,
     main,
     .footer {
       width: min(1440px, calc(100% - 180px));
       margin-inline: auto;
-      border-left: 14px solid var(--wood-edge);
-      border-right: 14px solid var(--wood-edge);
+      border-left: none;
+      border-right: none;
       box-shadow:
-        -20px 0 34px rgba(0,0,0,.30),
-        20px 0 34px rgba(0,0,0,.30),
-        inset 3px 0 rgba(255,241,171,.65),
-        inset -3px 0 rgba(126,82,5,.28);
+        -20px 0 34px rgba(0,0,0,.22),
+        20px 0 34px rgba(0,0,0,.22);
     }
 
     main {
@@ -1181,16 +1206,16 @@
     #services,
     #about,
     #contact {
-      background: rgba(251, 247, 238, 0.48) !important;
-      backdrop-filter: blur(1.5px) saturate(1.08);
-      -webkit-backdrop-filter: blur(1.5px) saturate(1.08);
+      background: rgba(251, 247, 238, 0.22) !important;
+      backdrop-filter: blur(0.6px) saturate(1.06);
+      -webkit-backdrop-filter: blur(0.6px) saturate(1.06);
     }
 
     .work,
     .sister {
-      background: rgba(238, 243, 239, 0.54) !important;
-      backdrop-filter: blur(1.5px) saturate(1.05);
-      -webkit-backdrop-filter: blur(1.5px) saturate(1.05);
+      background: rgba(238, 243, 239, 0.28) !important;
+      backdrop-filter: blur(0.8px) saturate(1.04);
+      -webkit-backdrop-filter: blur(0.8px) saturate(1.04);
     }
 
     .site-header {
@@ -1258,27 +1283,8 @@
 
     .hero::before,
     .hero::after {
-      position: absolute;
-      z-index: 0;
-      color: rgba(244, 198, 78, .17);
-      font-size: clamp(180px, 20vw, 320px);
-      line-height: 1;
-      pointer-events: none;
-      filter: drop-shadow(0 10px 10px rgba(0,0,0,.10));
-    }
-
-    .hero::before {
-      content: "♞";
-      left: -55px;
-      bottom: -75px;
-      transform: rotate(-8deg);
-    }
-
-    .hero::after {
-      content: "♛";
-      right: -45px;
-      top: -45px;
-      transform: rotate(7deg);
+      content: none !important;
+      display: none !important;
     }
 
     .hero-grid {
@@ -1317,7 +1323,7 @@
     }
 
     .chess-piece {
-      color: #f4c64e;
+      color: rgba(255,255,255,0.92);
       text-shadow:
         0 4px 8px rgba(0,0,0,.58),
         0 0 8px rgba(255,235,160,.35);
@@ -1360,7 +1366,12 @@
 
     @media (max-width: 900px) {
       body {
-        background: var(--cream);
+        background-color: #ead39b;
+        background-image: var(--board-image);
+        background-size: 760px auto;
+        background-repeat: repeat;
+        background-position: center top;
+        background-attachment: scroll;
       }
 
       .site-header,
@@ -1370,6 +1381,26 @@
         border-right: 0;
         border-left: 0;
         box-shadow: none;
+      }
+
+      .hero,
+      #services,
+      #about,
+      #contact {
+        background: rgba(251, 247, 238, 0.16) !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .work,
+      .sister {
+        background: rgba(238, 243, 239, 0.22) !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .site-header {
+        background: rgba(251, 247, 238, 0.78) !important;
       }
 
       .chess-divider {
@@ -1388,6 +1419,14 @@
       .hero::after {
         opacity: .45;
         font-size: 150px;
+      }
+    }
+
+  
+    @media (max-width: 900px) {
+      body::before,
+      body::after {
+        width: 14px;
       }
     }
 
