@@ -1120,6 +1120,225 @@
       }
     }
 
+
+    /* REAL WOOD CHESSBOARD IMAGE FRAME + SECTION DIVIDERS */
+    :root {
+      --wood-edge: #3a2114;
+      --board-image: url("asset/chess%20board.jpg");
+    }
+
+    body {
+      background-color: #6a3f24;
+      background-image:
+        linear-gradient(rgba(48, 26, 14, 0.14), rgba(48, 26, 14, 0.14)),
+        var(--board-image);
+      background-size: auto, 760px auto;
+      background-repeat: repeat, repeat;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    .site-header,
+    main,
+    .footer {
+      width: min(1440px, calc(100% - 180px));
+      margin-inline: auto;
+      border-left: 14px solid var(--wood-edge);
+      border-right: 14px solid var(--wood-edge);
+      box-shadow:
+        -20px 0 34px rgba(0,0,0,.32),
+        20px 0 34px rgba(0,0,0,.32),
+        inset 1px 0 rgba(255,255,255,.12),
+        inset -1px 0 rgba(255,255,255,.12);
+    }
+
+    main {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .chess-divider {
+      position: relative;
+      height: 118px;
+      overflow: hidden;
+      border-top: 12px solid var(--wood-edge);
+      border-bottom: 12px solid var(--wood-edge);
+      background-image:
+        linear-gradient(rgba(47, 26, 16, .18), rgba(47, 26, 16, .18)),
+        var(--board-image);
+      background-size: auto, 760px auto;
+      background-position: center center;
+      box-shadow:
+        inset 0 8px 12px rgba(255,255,255,.12),
+        inset 0 -10px 16px rgba(0,0,0,.22);
+    }
+
+    .chess-divider::before {
+      content: "";
+      position: absolute;
+      inset: 8px 0;
+      border-top: 1px solid rgba(255,255,255,.28);
+      border-bottom: 1px solid rgba(0,0,0,.32);
+      pointer-events: none;
+    }
+
+    .chess-divider::after {
+      content: "♞  every move should mean something  ♛";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #fff8df;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      text-shadow:
+        0 3px 3px rgba(0,0,0,.78),
+        0 0 12px rgba(0,0,0,.48);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      z-index: 0;
+      color: rgba(244, 198, 78, .17);
+      font-size: clamp(180px, 20vw, 320px);
+      line-height: 1;
+      pointer-events: none;
+      filter: drop-shadow(0 10px 10px rgba(0,0,0,.10));
+    }
+
+    .hero::before {
+      content: "♞";
+      left: -55px;
+      bottom: -75px;
+      transform: rotate(-8deg);
+    }
+
+    .hero::after {
+      content: "♛";
+      right: -45px;
+      top: -45px;
+      transform: rotate(7deg);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .chess-panel {
+      background-image:
+        linear-gradient(rgba(44, 24, 13, .12), rgba(44, 24, 13, .12)),
+        var(--board-image);
+      background-size: auto, cover;
+      background-position: center;
+      border-color: var(--wood-edge);
+      box-shadow:
+        16px 16px 0 var(--gold),
+        inset 0 0 0 8px rgba(255,255,255,.08),
+        inset 0 0 35px rgba(0,0,0,.26);
+    }
+
+    .chess-grid {
+      display: none;
+    }
+
+    .chess-note {
+      border-color: var(--wood-edge);
+      background: rgba(251,247,238,.94);
+      box-shadow: 6px 6px 0 rgba(47,26,16,.35);
+      backdrop-filter: blur(3px);
+    }
+
+    .chess-center {
+      border-color: var(--wood-edge);
+      box-shadow:
+        10px 10px 0 var(--gold),
+        inset 0 0 20px rgba(255,255,255,.08);
+    }
+
+    .chess-piece {
+      color: #f4c64e;
+      text-shadow:
+        0 4px 8px rgba(0,0,0,.58),
+        0 0 8px rgba(255,235,160,.35);
+    }
+
+    .work {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .work::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .06;
+      background-image: var(--board-image);
+      background-size: 620px auto;
+      background-position: center;
+      pointer-events: none;
+    }
+
+    .work .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .work-visual {
+      overflow: hidden;
+      padding: 0;
+      background: var(--navy);
+    }
+
+    .work-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background: var(--cream);
+      }
+
+      .site-header,
+      main,
+      .footer {
+        width: 100%;
+        border-right: 0;
+        border-left: 0;
+        box-shadow: none;
+      }
+
+      .chess-divider {
+        height: 78px;
+        border-top-width: 8px;
+        border-bottom-width: 8px;
+        background-size: auto, 520px auto;
+      }
+
+      .chess-divider::after {
+        font-size: 10px;
+        letter-spacing: .6px;
+      }
+
+      .hero::before,
+      .hero::after {
+        opacity: .45;
+        font-size: 150px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1240,6 +1459,8 @@
       </div>
     </section>
 
+    <div class="chess-divider" aria-hidden="true"></div>
+
     <section class="section philosophy" id="philosophy">
       <div class="philosophy-inner">
         <h2>
@@ -1330,6 +1551,8 @@
         </div>
       </div>
     </section>
+
+    <div class="chess-divider" aria-hidden="true"></div>
 
     <section class="section work" id="work">
       <div class="container">
@@ -1434,6 +1657,8 @@
         </div>
       </div>
     </section>
+
+    <div class="chess-divider" aria-hidden="true"></div>
 
     <section class="section sister" id="tax">
       <div class="container">
